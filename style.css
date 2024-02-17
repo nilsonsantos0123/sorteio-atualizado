@@ -1,0 +1,130 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Tilt Warp', cursive;;
+}
+
+body{
+    background-image: url(imagem/fundo-de-formas-geometricas-abstratas-em-azul.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+video{
+    width: 300px;/*largura*/
+}
+
+.container{
+
+    width: 100vw; /* tamnaho da tela total para os lados*/
+    height: 100vh; /* tamnaho da tela total para baixo*/
+    display:flex;/*caixa para organizar os itens*/
+    justify-content: center;/*justifica o itens no centro*/
+    align-items: center;/*alinha os itens no centro*/
+    flex-direction: column; /* coloca os intens em coluna*/
+}
+
+h1{
+    font-size: 40px;
+    text-transform: uppercase; /*colocar texto em maiuscula*/
+    background: linear-gradient(45deg, #867251, #1c1c41, #85ad3a, #1c1c41);
+    background-size: 400% 100%; /*tamanho da imagem de fundo do elemento*/
+    animation: degrade 8s linear infinite alternate; /*aplica uma animação enttre estilo*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+@keyframes degrade{
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+h2{
+    color: #1c1c41;
+    font-weight: lighter;
+}
+
+.inputs{
+    text-align: center;
+    margin-top: 15px;
+    width: 560px;
+}
+
+input{
+    padding: 8px;
+    width: 210px;
+    height: 55px;
+    margin: 10px;
+    border: solid  rgb(50, 129, 129) 1.8px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+input::placeholder{
+    color:  cadetblue;
+}
+
+.inputs #aparecerResultado{
+    width: 90px;
+    height: 60px;
+    font-size: 30px;
+}
+
+input:focus{
+    border: 2px solid rgba(123, 224, 8, 0.694);
+}
+
+.buttonResult{
+    width: 200px;
+    height: 45px;
+    border-radius: 50px;
+    margin-bottom: 90px;
+    font-size: 22px;
+    font-family: 'Tilt Warp', cursive;
+    background: linear-gradient(55deg, #ffffff, #ffffff,#ffffff, #60e408c2 );
+    color: #1c1c41;
+    border: none;
+    box-shadow: 1px 0 2px #1c1c41,
+    3px 3px 2px #60e408c2 ;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+button:focus{
+    scale: 1.1;
+}
+
+@media (max-widht: 1050px) {
+    video{
+       width: 260px; 
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    .inputs{
+        width: 300px;
+    }
+}
+
+
+
+
